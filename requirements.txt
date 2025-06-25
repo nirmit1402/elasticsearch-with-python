@@ -1,0 +1,4 @@
+```txt
+pandas>=2.2
+elasticsearch>=8,<9
+python-dotenv>=1.0
