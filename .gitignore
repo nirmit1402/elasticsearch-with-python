@@ -1,0 +1,21 @@
+# virtual envs
+.venv/
+env/
+
+# python bytecode
+__pycache__/
+*.py[cod]
+
+# system files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+
+# data
+data/*.csv
