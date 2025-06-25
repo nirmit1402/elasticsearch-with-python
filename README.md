@@ -1,29 +1,23 @@
 # 🚑 Hospital Indexer
 
-A tiny utility that cleans a MoHFW-style hospital directory CSV, creates an
-Elasticsearch index with a **geo_point** field, and bulk-loads every row.
-A sample search script shows how to query by district name and/or by
-geo distance.
-
-> Tested on **Python 3.10+** and **Elasticsearch 8.x**.
+A utility to bulk index hospital data from CSV into Elasticsearch, with support for geo-point indexing and district-based search.
 
 ---
 
 ## Quick-start
 
 ```bash
-# 1. clone / unpack this repo
+# Clone this repo
 cd hospital-indexer
 
-# 2. create a virtual env
+# Create a virtual environment
 python -m venv .venv && source .venv/bin/activate
 
-# 3. install deps
+# Install dependencies
 pip install -r requirements.txt
 
-# 4. set ES connection details
-export ES_HOST=localhost
-export ES_PORT=9200
-
-# 5. run the indexer (replace CSV path if needed)
+# Run the indexer
 python -m src.index_hospitals data/hospital_directory_sample.csv
+
+# Try a sample query
+python -m src.search_examples anantapur
